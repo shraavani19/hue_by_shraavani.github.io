@@ -1,0 +1,185 @@
+.profile {
+    width: 57%;
+    height: 100px;
+    margin: auto;
+}
+
+.pulsating-text {
+    font-size: 20px;
+    color: rgb(145, 148, 148);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+    animation-name: font-resizer;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes font-resizer {
+    0% {
+        font-size: 20px;
+    }
+
+    25% {
+        font-size: 25px;
+    }
+
+    50% {
+        font-size: 30px;
+    }
+
+    75% {
+        font-size: 35px;
+    }
+
+    100% {
+        font-size: 40px;
+    }
+}
+
+.text-translate {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(145, 148, 148);
+
+    animation-name: x-translation;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes x-translation {
+    from {
+        transform: translateX(-100px)
+    }
+
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(145, 148, 148);
+}
+  
+.text span {
+    font-size: 60px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #fff;
+    animation: zoomup 2s linear infinite;
+    animation-delay: calc(200ms * var(--i));
+}
+  
+@keyframes zoomup {
+    0%,
+    100% {
+      color: #000000;
+      filter: blur(1px);
+      text-shadow: 0 0 10px rgb(250, 234, 242), 0 0 20px rgb(250, 234, 242), 0 0 30px rgb(250, 234, 242),
+        0 0 40px rgb(250, 234, 242), 0 0 60px rgb(250, 234, 242), 0 0 80px rgb(250, 234, 242), 0 0 100px #00c2ba,
+        0 0 120px rgb(250, 234, 242);
+    }
+  
+    5%,
+    95% {
+      filter: blur(0);
+      color: #fff;
+      text-shadow: none;
+    }
+}
+
+.sidebar-left {
+    width: 20%;
+    height: 600px;
+    background-color: rgb(250, 234, 242) ;
+    float: left;
+}
+
+.sidebar-right {
+    width: 20%;
+    height: 600px;
+    background-color: rgb(250, 234, 242);
+    float: right;
+}
+
+.mid-section {
+    width: 60%;
+    height: 600px;
+    background-color: rgb(250, 234, 242);
+    float: left;
+}
+
+.sidebar-left img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin: 50px;
+}
+
+.sidebar-left header {
+    text-align: center;
+    color: black;
+    font-weight: 800;
+}
+
+.sidebar-right img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin: 50px;
+}
+
+.sidebar-right header {
+    text-align: center;
+    color: black;
+    font-weight: 800;
+}
+
+.button {
+    margin: auto;
+    display: block;
+    width: 70%;
+    background-color: rgb(228, 227, 227);
+    color: black;
+    margin-top: 30px;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 5px solid rgb(250, 234, 242)
+
+}
+
+.button:hover {
+    background-color: lightpink;
+    width: 80%;
+}
+
+.button:hover::after {
+    content: "Save 40%";
+}
+
+table {
+    border: 2px double  rgb(245, 196, 219) ;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    background-color: rgb(228, 227, 227);
+    margin-top: 30px;
+}
+
+td {
+    border: 3px solid rgb(245, 196, 219);
+}
+
+.footer {
+    background-color:  rgb(145, 148, 148) ;
+    color: rgb(225, 226, 226);
+    text-align: center;
+}
